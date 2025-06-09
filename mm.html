@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>腾跃卫士多元护踝 - 活动详情</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#FFFFFF',
+                        accent: '#FF7D00',
+                        neutral: '#F5F7FA',
+                        dark: '#333333'
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .hover-scale {
+                transition: transform 0.3s ease;
+            }
+            .hover-scale:hover {
+                transform: scale(1.02);
+            }
+            .card-shadow {
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            }
+            .window-appear {
+                animation: fadeIn 0.5s ease-in-out;
+            }
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+        }
+    </style>
+</head>
+<body class="font-inter bg-neutral text-dark">
+    <!-- 导航栏 -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm shadow-md transition-all duration-300">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa fa-heartbeat text-primary text-2xl"></i>
+                <h1 class="text-xl md:text-2xl font-bold text-primary">腾跃卫士多元护踝</h1>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#activity1" class="font-medium hover:text-primary transition-colors duration-200">足间的守护誓约</a>
+                <a href="#activity2" class="font-medium hover:text-primary transition-colors duration-200">ColorSprint共创计划</a>
+                <a href="#activity3" class="font-medium hover:text-primary transition-colors duration-200">场地守护者</a>
+                <a href="#activity4" class="font-medium hover:text-primary transition-colors duration-200">银龄关爱摄影大赛</a>
+            </nav>
+            <button class="md:hidden text-primary text-xl" id="menuToggle">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+        <!-- 移动端菜单 -->
+        <div class="md:hidden hidden bg-white shadow-lg absolute w-full" id="mobileMenu">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+                <a href="#activity1" class="py-2 font-medium hover:text-primary transition-colors duration-200">足间的守护誓约</a>
+                <a href="#activity2" class="py-2 font-medium hover:text-primary transition-colors duration-200">ColorSprint共创计划</a>
+                <a href="#activity3" class="py-2 font-medium hover:text-primary transition-colors duration-200">场地守护者</a>
+                <a href="#activity4" class="py-2 font-medium hover:text-primary transition-colors duration-200">银龄关爱摄影大赛</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主横幅 -->
+    <section class="relative h-[50vh] md:h-[60vh] overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary/60 z-10"></div>
+        <img src="image/image1.jpg" alt="腾跃卫士多元护踝活动展示" class="absolute inset-0 w-full h-full object-cover">
+        <div class="relative z-20 container mx-auto px-4 h-full flex flex-col justify-center items-start">
+            <h2 class="text-[clamp(2rem,5vw,3.5rem)] font-bold text-white mb-4 text-shadow max-w-3xl">腾跃卫士多元护踝 - 四大主题活动</h2>
+            <p class="text-[clamp(1rem,2vw,1.25rem)] text-white/90 mb-8 max-w-2xl">我们不仅提供优质的护踝产品，更通过四大核心活动，连接情感、传递责任、共创潮流、记录美好。</p>
+            <div class="flex flex-wrap gap-4">
+                <a href="#activity1" class="bg-white text-primary font-medium px-6 py-3 rounded-full hover:bg-primary hover:text-white transition-all duration-300 shadow-lg">
+                    足间的守护誓约
+                </a>
+                <a href="#activity2" class="bg-white text-primary font-medium px-6 py-3 rounded-full hover:bg-primary hover:text-white transition-all duration-300 shadow-lg">
+                    ColorSprint共创计划
+                </a>
+                <a href="#activity3" class="bg-white text-primary font-medium px-6 py-3 rounded-full hover:bg-primary hover:text-white transition-all duration-300 shadow-lg">
+                    场地守护者
+                </a>
+                <a href="#activity4" class="bg-white text-primary font-medium px-6 py-3 rounded-full hover:bg-primary hover:text-white transition-all duration-300 shadow-lg">
+                    银龄关爱摄影大赛
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 活动列表 -->
+    <main class="container mx-auto px-4 py-16">
+        <div class="text-center mb-16">
+            <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold mb-4">探索我们的主题活动</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">每一项活动都代表着我们对健康、关爱与创新的承诺</p>
+        </div>
+
+        <!-- 活动卡片 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- 活动1卡片 -->
+            <div class="bg-white rounded-xl overflow-hidden card-shadow hover-scale cursor-pointer activity-card" data-target="activity1" data-image="image/image3.jpg">
+                <div class="h-48 overflow-hidden">
+                    <img src="image/image3.jpg" alt="足间的守护誓约活动" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-primary">足间的守护誓约</h3>
+                    <p class="text-gray-600 mb-4">以护踝为诺，许一生周全</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-gray-500"><i class="fa fa-calendar-o mr-1"></i> 长期活动</span>
+                        <button class="text-primary font-medium hover:underline">了解详情 <i class="fa fa-arrow-right ml-1"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 活动2卡片 -->
+            <div class="bg-white rounded-xl overflow-hidden card-shadow hover-scale cursor-pointer activity-card" data-target="activity2" data-image="image/image5.jpg">
+                <div class="h-48 overflow-hidden">
+                    <img src="image/image5.jpg" alt="ColorSprint共创计划活动" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-primary">ColorSprint共创计划</h3>
+                    <p class="text-gray-600 mb-4">发挥创意，设计专属护踝</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-gray-500"><i class="fa fa-calendar-o mr-1"></i> 定期举办</span>
+                        <button class="text-primary font-medium hover:underline">了解详情 <i class="fa fa-arrow-right ml-1"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 活动3卡片 -->
+            <div class="bg-white rounded-xl overflow-hidden card-shadow hover-scale cursor-pointer activity-card" data-target="activity3" data-image="image/image2.jpg">
+                <div class="h-48 overflow-hidden">
+                    <img src="image/image2.jpg" alt="场地守护者公益行动" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-primary">场地守护者公益行动</h3>
+                    <p class="text-gray-600 mb-4">爱护运动场地，共创美好环境</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-gray-500"><i class="fa fa-calendar-o mr-1"></i> 定期举办</span>
+                        <button class="text-primary font-medium hover:underline">了解详情 <i class="fa fa-arrow-right ml-1"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 活动4卡片 -->
+            <div class="bg-white rounded-xl overflow-hidden card-shadow hover-scale cursor-pointer activity-card" data-target="activity4" data-image="image/image4.png">
+                <div class="h-48 overflow-hidden">
+                    <img src="image/image4.png" alt="银龄关爱摄影大赛" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-primary">银龄关爱摄影大赛</h3>
+                    <p class="text-gray-600 mb-4">用镜头记录温暖瞬间</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-gray-500"><i class="fa fa-calendar-o mr-1"></i> 每季度举办</span>
+                        <button class="text-primary font-medium hover:underline">了解详情 <i class="fa fa-arrow-right ml-1"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 活动窗口 -->
+    <section id="activityWindows" class="fixed inset-0 bg-black/70 z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-xl w-full max-w-4xl max-h-[90vh] overflow-auto window-appear">
+            <div class="relative">
+                <div class="h-48 md:h-64 overflow-hidden">
+                    <img id="windowImage" src="" alt="" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                        <div class="p-6 md:p-8">
+                            <h2 id="windowTitle" class="text-2xl md:text-3xl font-bold text-white"></h2>
+                            <p id="windowSubtitle" class="text-white/80 mt-1"></p>
+                        </div>
+                    </div>
+                </div>
+                <button id="closeWindow" class="absolute top-4 right-4 bg-white/80 hover:bg-white text-primary rounded-full w-10 h-10 flex items-center justify-center transition-colors duration-200">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            <div class="p-6 md:p-8">
+                <div id="windowContent" class="prose max-w-none">
+                    <!-- 内容将通过JavaScript动态加载 -->
+                </div>
+                <div class="mt-8 pt-6 border-t border-gray-200">
+                    <button id="shareActivity" class="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg transition-colors duration-200 flex items-center">
+                        <i class="fa fa-share-alt mr-2"></i> 分享活动
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品特点区域 -->
+    <section id="features" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark mb-4">产品特点</h2>
+                <p class="text-gray-600 text-lg">腾跃卫士多元护踝融合尖端科技与人体工程学设计，为您提供全方位的足部保护与健康监测。</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 特点卡片1 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fa fa-microchip text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">AI智能防护</h3>
+                    <p class="text-gray-600">内置高精度传感器，实时监测足部运动状态，智能调节支撑力度，预防运动损伤。</p>
+                </div>
+
+                <!-- 特点卡片2 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-secondary/10 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fa fa-heartbeat text-secondary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">健康数据分析</h3>
+                    <p class="text-gray-600">通过专属APP同步数据，提供步态分析、运动强度建议和康复指导，助您科学运动。</p>
+                </div>
+
+                <!-- 特点卡片3 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fa fa-medkit text-accent text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">精准康复辅助</h3>
+                    <p class="text-gray-600">针对脚踝受伤人群，提供分级康复方案，动态调整支撑与压力，加速恢复进程。</p>
+                </div>
+
+                <!-- 特点卡片4 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fa fa-tint text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">防水透气</h3>
+                    <p class="text-gray-600">采用高科技防水透气面料，保持足部干爽舒适，适合各种运动环境与气候条件。</p>
+                </div>
+
+                <!-- 特点卡片5 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fa fa-bolt text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">持久耐用</h3>
+                    <p class="text-gray-600">高强度材料与精密工艺结合，经严格测试，可承受高强度运动，使用寿命长达2-3年。</p>
+                </div>
+
+                <!-- 特点卡片6 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fa fa-magic text-yellow-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">个性化定制</h3>
+                    <p class="text-gray-600">根据脚型扫描数据提供定制化护踝，确保完美贴合，提升舒适度与防护效果。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 用户评价区域 -->
+    <section id="testimonials" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark mb-4">用户评价</h2>
+                <p class="text-gray-600 text-lg">听听我们的用户如何评价腾跃卫士多元护踝及相关活动。</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 评价卡片1 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://picsum.photos/id/64/80/80" alt="张**" class="w-14 h-14 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold">张**</h4>
+                            <p class="text-gray-600 text-sm">马拉松爱好者</p>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <i class="fa fa-star text-yellow-400"></i>
+                        <i class="fa fa-star text-yellow-400"></i>
+                        <i class="fa fa-star text-yellow-400"></i>
+                        <i class="fa fa-star text-yellow-400"></i>
+                        <i class="fa fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 italic">"使用腾跃卫士护踝两个月了，它帮我避免了多次脚踝扭伤。智能监测功能让我能科学调整训练强度，非常推荐！"</p>
+                </div>
+
+                <!-- 评价卡片2 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://picsum.photos/id/65/80/80" alt="李*" class="w-14 h-14 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold">李*</h4>
+                            <p class="text-gray-600 text-sm">篮球教练</p>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <i class="fa fa-star text-yellow-400"></i>
+                        <i class="fa fa-star text-yellow-400"></i>
+                        <i class="fa fa-star text-yellow-400"></i>
+                        <i class="fa fa-star text-yellow-400"></i>
+                        <i class="fa fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 italic">"我推荐所有篮球爱好者使用腾跃卫士护踝。它的支撑性非常好，同时又很透气，不会让脚感到闷热。ColorSprint共创计划也很有意思，我打算设计一个我喜欢的配色！"</p>
+                </div>
+
+                <!-- 评价卡片3 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://picsum.photos/id/91/80/80" alt="王*" class="w-14 h-14 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold">王*</h4>
+                            <p class="text-gray-600 text-sm">舞蹈教师</p>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <i class="fa fa-star text-yellow-400"></i>
+                        <i class="fa fa-star text-yellow-400"></i>
+                        <i class="fa fa-star text-yellow-400"></i>
+                        <i class="fa fa-star text-yellow-400"></i>
+                        <i class="fa fa-star-half-o text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 italic">"作为舞蹈教师，我的脚踝经常承受很大压力。腾跃卫士护踝的精准康复功能帮我加速了脚踝伤后的恢复。参加银龄关爱摄影大赛也让我有机会记录和父母相处的美好时光。"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-primary text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fa fa-heartbeat text-2xl"></i>
+                        <h3 class="text-xl font-bold">腾跃卫士多元护踝</h3>
+                    </div>
+                    <p class="text-white/80 mb-4">守护健康，关爱生命</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-white/80 transition-colors duration-200">
+                            <i class="fa fa-weixin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-white/80 transition-colors duration-200">
+                            <i class="fa fa-weibo text-xl"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-white/80 transition-colors duration-200">
+                            <i class="fa fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-white/80 transition-colors duration-200">
+                            <i class="fa fa-twitter text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">快速链接</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-white/80 hover:text-white transition-colors duration-200">首页</a></li>
+                        <li><a href="#" class="text-white/80 hover:text-white transition-colors duration-200">关于我们</a></li>
+                        <li><a href="#" class="text-white/80 hover:text-white transition-colors duration-200">产品中心</a></li>
+                        <li><a href="#" class="text-white/80 hover:text-white transition-colors duration-200">活动资讯</a></li>
+                        <li><a href="#" class="text-white/80 hover:text-white transition-colors duration-200">联系我们</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">活动</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-white/80 hover:text-white transition-colors duration-200">足间的守护誓约</a></li>
+                        <li><a href="#" class="text-white/80 hover:text-white transition-colors duration-200">ColorSprint共创计划</a></li>
+                        <li><a href="#" class="text-white/80 hover:text-white transition-colors duration-200">场地守护者</a></li>
+                        <li><a href="#" class="text-white/80 hover:text-white transition-colors duration-200">银龄关爱摄影大赛</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">联系我们</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker mt-1 mr-2"></i>
+                            <span class="text-white/80">德阳城市轨道交通职业学院</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-phone mr-2"></i>
+                            <span class="text-white/80">18384990922</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-envelope mr-2"></i>
+                            <span class="text-white/80">3511906672qq.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/20 mt-8 pt-8 text-center text-white/60">
+                <p>&copy; 2025 腾跃卫士多元护踝. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 活动数据
+        const activities = {
+            activity1: {
+                title: "足间的守护誓约",
+                subtitle: "以护踝为诺，许一生周全",
+                image: "https://picsum.photos/id/328/1200/600",
+                content: `
+                    <h3 class="text-xl font-bold mb-4">活动背景</h3>
+                    <p class="mb-4">在当今快节奏的生活中，人们往往忽略了足部健康的重要性。我们的护踝产品不仅提供专业的足部保护，更承载着一份情感与承诺。</p>
+                    <p class="mb-4">本活动旨在通过护踝这一载体，让人们向自己珍视的人表达关爱与守护，同时倡导健康生活方式。</p>
+
+                    <h3 class="text-xl font-bold mb-4 mt-8">定制规则</h3>
+                    <ul class="list-disc pl-5 mb-4 space-y-2">
+                        <li>购买我们的腾跃卫士多元护踝，即可参与"足间的守护誓约"活动。</li>
+                        <li>每对护踝可免费刻字一次，字数不超过10个汉字或20个英文字母。</li>
+                        <li>提供多种字体和图案选择，满足不同的个性化需求。</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold mb-4 mt-8">佩戴仪式</h3>
+                    <p class="mb-4">我们为每对参与活动的护踝设计了专属的佩戴仪式，象征着双方的承诺与守护：</p>
+                    <ol class="list-decimal pl-5 mb-4 space-y-2">
+                        <li>双方相对站立，手持护踝，眼神专注。</li>
+                        <li>由一方为另一方佩戴护踝，动作轻柔，表达关爱。</li>
+                        <li>佩戴完成后，双方可轻声说出自己的守护誓言。</li>
+                        <li>最后，拥抱彼此，象征守护的开始。</li>
+                    </ol>
+
+                    <h3 class="text-xl font-bold mb-4 mt-8">象征意义</h3>
+                    <p class="mb-4">护踝作为足部的守护者，不仅能在运动时提供支撑和保护，更象征着佩戴者之间的承诺与守护。</p>
+                    <p class="mb-4">无论走到哪里，这份守护都将伴随左右，提醒人们珍视彼此，关爱健康。</p>
+
+                    <h3 class="text-xl font-bold mb-4 mt-8">传播渠道</h3>
+                    <p class="mb-4">我们通过多种渠道传播"足间的守护誓约"活动：</p>
+                    <ul class="list-disc pl-5 mb-4 space-y-2">
+                        <li><strong>微信公众号</strong>：定期发布活动动态、用户故事和佩戴仪式视频。</li>
+                        <li><strong>微博</strong>：发起话题讨论，分享感人瞬间，与粉丝互动。</li>
+                        <li><strong>线下活动</strong>：在各大商场、运动场馆举办活动宣传和体验。</li>
+                        <li><strong>合作推广</strong>：与情侣博主、运动达人合作，进行活动推广。</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold mb-4 mt-8">活动意义</h3>
+                    <p class="mb-4">对于情侣而言，"足间的守护誓约"是一份独特的情感表达，能增强彼此之间的感情纽带。</p>
+                    <p class="mb-4">对于社会而言，活动倡导了健康生活方式和珍视亲情、友情的价值观。</p>
+                    <p class="mb-4">对于品牌而言，活动提升了品牌的情感价值和社会责任感，增强了品牌的美誉度和忠诚度。</p>
+                `
+            },
+            activity2: {
+                title: "ColorSprint共创计划",
+                subtitle: "发挥创意，设计专属护踝",
+                image: "https://picsum.photos/id/26/1200/600",
+                content: `
+                    <h3 class="text-xl font-bold mb-4">活动背景</h3>
+                    <p class="mb-4">为了满足不同消费者对护踝颜色和图案的个性化需求，我们特别推出"ColorSprint共创计划"，邀请广大消费者参与护踝的设计过程。</p>
+                    <p class="mb-4">通过这个计划，我们希望能够收集到更多有创意的设计，为市场带来更多样化的产品选择。</p>
+
+                    <h3 class="text-xl font-bold mb-4 mt-8">活动时间</h3>
+                    <ul class="list-disc pl-5 mb-4 space-y-2">
+                        <li><strong>投稿征集期</strong>：每月1日-15日</li>
+                        <li><strong>全民投票期</strong>：每月16日-25日</li>
+                        <li><strong>结果公布期</strong>：每月26日-30日</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold mb-4 mt-8">投稿形式</h3>
+                    <p class="mb-4">参与者需要提交以下内容：</p>
+                    <ul class="list-disc pl-5 mb-4 space-y-2">
+                        <li><strong>色号</strong>：指定护踝主体和装饰部分的颜色。</li>
+                        <li><strong>示意图</strong>：用绘图或照片形式展示设计效果。</li>
+                        <li><strong>设计理念</strong>：简要说明设计的灵感来源和意义。</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold mb-4 mt-8">投稿渠道</h3>
+                    <p class="mb-4">参与者可以通过以下方式投稿：</p>
+                    <ul class="list-disc pl-5 mb-4 space-y-2">
+                        <li><strong>网页端</strong>：访问我们的官方网站，在活动专区提交设计。</li>
+                        <li><strong>APP端</strong>：下载我们的腾跃卫士多元护踝APP，在活动页面上传设计。</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold mb-4 mt-8">投票规则和福利</h3>
+                    <p class="mb-4">所有用户都可以参与投票，为自己喜欢的设计投票。投票用户将获得以下福利：</p>
+                    <ul class="list-disc pl-5 mb-4 space-y-2">
+                        <li>每次投票可获得50积分，积分可用于兑换护踝产品。</li>
+                        <li>最终入选的设计，其所有投票者都将获得该款护踝的早鸟购买权。</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold mb-4 mt-8">入围评选与奖励</h3>
+                    <p class="mb-4">我们将组织专业的设计团队对所有投稿进行评审，选出最具创意和市场潜力的设计：</p>
+                    <ul class="list-disc pl-5 mb-4 space-y-2">
+                        <li><strong>金奖（1名）</strong>：获得5000元现金奖励，设计将被生产为正式产品，并获得该产品销售额的5%分成。</li>
+                        <li><strong>银奖（3名）</strong>：获得价值2000元的护踝产品套装，设计将有机会被生产为限量版产品。</li>
+                        <li><strong>铜奖（5名）</strong>：获得价值1000元的护踝产品，设计将在官方网站展示。</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold mb-4 mt-8">产品落地与传播</h3>
+                    <p class="mb-4">入围的设计将有机会被生产为实际产品，并通过以下方式进行传播：</p>
+                    <ul class="list-disc pl-5 mb-4 space-y-2">
+                        <li>在我们的官方网站和线下门店销售。</li>
+                        <li>通过社交媒体、广告等渠道进行宣传推广。</li>
+                        <li>销售额分成情况将每季度在官方网站公示，确保透明公正。</li>
+                    </ul>
+                `
+            },
+            activity3: {
+                title: "场地守护者公益行动",
+                subtitle: "爱护运动场地，共创美好环境",
+                image: "https://picsum.photos/id/1048/1200/600",
+                content: `
+                    <h3 class="text-xl font-bold mb-4">活动背景</h3>
+                    <p class="mb-4">随着人们对健康生活的追求，运动场地的使用频率越来越高。然而，部分运动场地的卫生和维护状况却不容乐观，影响了人们的运动体验。</p>
+                    <p class="mb-4">为了提高人们对运动场地的保护意识，营造一个干净、整洁、舒适的运动环境，我们发起了"场地守护者"公益行动。</p>
+
+                    <h3 class="text-xl font-bold mb-4 mt-8">活动时间</h3>
+                    <p class="mb-4">公司前期将安排1-2个月的时间进行活动筹备和宣传，具体活动时间将根据实际情况确定并提前公布。</p>
+
+                    <h3 class="text-xl font-bold mb-4 mt-8">活动内容和参与流程</h3>
+                    <p class="mb-4">参与者购买我们的腾跃卫士多元护踝后，即可参与"场地守护者"公益行动：</p>
+                    <ol class="list-decimal pl-5 mb-4 space-y-2">
+                        <li>购买指定款式的腾跃卫士多元护踝。</li>
+                        <li>在购买后的一个月内，前往指定的运动场地进行打扫和维护，每次活动时长不少于1小时。</li>
+                        <li>活动结束后，拍摄至少3张工作照片和一段短视频，记录活动过程和场地变化。</li>
+                        <li>将照片和视频上传至我们的官方平台，并填写活动反馈表。</li>
+                        <li>我们将在收到上传内容后的7个工作日内进行审核，审核通过后即可获得相应的返利。</li>
+                    </ol>
+
+                    <h3 class="text-xl font-bold mb-4 mt-8">返利机制</h3>
+                    <p class="mb-4">根据不同版本的护踝，参与者可获得不同金额的返利：</p>
+                    <ul class="list-disc pl-5 mb-4 space-y-2">
+                        <li><strong>标准版护踝</strong>：每次活动可获得20元返利，累计参与5次活动后，可获得全额退款（即购买价格100元）。</li>
+                        <li><strong>专业版护踝</strong>：每次活动可获得30元返利，累计参与4次活动后，可获得全额退款（即购买价格120元）。</li>
+                        <li><strong>精英版护踝</strong>：每次活动可获得40元返利，累计参与3次活动后，可获得全额退款（即购买价格120元）。</li>
+                    </ul>
+                    <p class="mb-4">返利金额将以代金券的形式发放至用户账户，可用于购买我们的其他产品。</p>
+
+                    <h3 class="text-xl font-bold mb-4 mt-8">传播目标</h3>
+                    <p class="mb-4">通过"场地守护者"公益行动，我们希望能够：</p>
+                    <ul class="list-disc pl-5 mb-4 space-y-2">
+                        <li>提高公众对运动场地保护的意识，倡导文明运动的理念。</li>
+                        <li>增强品牌的社会责任感，提升品牌形象和美誉度。</li>
+                        <li>通过用户的实际参与和分享，扩大品牌的影响力和传播范围。</li>
+                    </ul>
+                `
+            },
+            activity4: {
+                title: "银龄关爱摄影大赛",
+                subtitle: "用镜头记录温暖瞬间",
+                image: "https://picsum.photos/id/366/1200/600",
+                content: `
+                    <h3 class="text-xl font-bold mb-4">活动背景</h3>
+                    <p class="mb-4">在当今社会，老年人常常面临着孤独和缺乏关爱的问题。我们希望通过举办"银龄关爱摄影大赛"，鼓励人们用镜头捕捉老年人生活中的温暖瞬间，传递关爱与正能量。</p>
+                    <p class="mb-4">同时，这也是一个展示我们护踝产品在老年人生活中实用性的机会，让更多人了解我们的品牌。</p>
+
+                    <h3 class="text-xl font-bold mb-4 mt-8">活动时间</h3>
+                    <p class="mb-4">活动将分为三个阶段：</p>
+                    <ul class="list-disc pl-5 mb-4 space-y-2">
+                        <li><strong>投稿阶段</strong>：[具体投稿时间1] - [具体投稿时间2]</li>
+                        <li><strong>评选阶段</strong>：[具体评选时间1] - [具体评选时间2]</li>
+                        <li><strong>颁奖阶段</strong>：[具体颁奖时间]</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold mb-4 mt-8">投稿要求</h3>
+                    <p class="mb-4">参赛作品必须符合以下要求：</p>
+                    <ul class="list-disc pl-5 mb-4 space-y-2">
+                        <li>主题必须围绕老年人的生活、情感、故事等，体现对老年人的关爱。</li>
+                        <li>作品必须为原创，不得抄袭、剽窃他人作品。</li>
+                        <li>照片格式为JPEG或PNG，分辨率不低于300dpi。</li>
+                        <li>每幅作品需附上不超过200字的文字说明，阐述作品的主题和拍摄背景。</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold mb-4 mt-8">评选标准</h3>
+                    <p class="mb-4">作品将根据以下标准进行评选：</p>
+                    <ul class="list-disc pl-5 mb-4 space-y-2">
+                        <li><strong>主题相关性</strong>：作品与"银龄关爱"主题的契合程度。</li>
+                        <li><strong>情感表达</strong>：作品所传达的情感是否真挚、动人。</li>
+                        <li><strong>摄影技巧</strong>：作品的构图、光线、色彩等摄影技巧的运用。</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold mb-4 mt-8">奖项设置</h3>
+                    <p class="mb-4">我们为本次大赛设置了丰富的奖项：</p>
+                    <ul class="list-disc pl-5 mb-4 space-y-2">
+                        <li><strong>一等奖（1名）</strong>：获得价值5000元的护踝产品套装，以及荣誉证书。</li>
+                        <li><strong>二等奖（3名）</strong>：获得价值2000元的护踝产品套装，以及荣誉证书。</li>
+                        <li><strong>三等奖（5名）</strong>：获得价值1000元的护踝产品，以及荣誉证书。</li>
+                        <li><strong>优秀奖（10名）</strong>：获得价值500元的护踝产品，以及荣誉证书。</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold mb-4 mt-8">活动意义</h3>
+                    <p class="mb-4">通过"银龄关爱摄影大赛"，我们希望能够：</p>
+                    <ul class="list-disc pl-5 mb-4 space-y-2">
+                        <li>唤起社会对老年人的关注和关爱，传递温暖与正能量。</li>
+                        <li>展示我们护踝产品在老年人生活中的实用性和价值。</li>
+                        <li>提升品牌的社会形象和美誉度，增强品牌的亲和力和影响力。</li>
+                    </ul>
+                `
+            }
+        };
+
+        // 菜单切换功能
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 活动卡片点击事件
+        const activityCards = document.querySelectorAll('.activity-card');
+        const activityWindows = document.getElementById('activityWindows');
+        const windowImage = document.getElementById('windowImage');
+        const windowTitle = document.getElementById('windowTitle');
+        const windowSubtitle = document.getElementById('windowSubtitle');
+        const windowContent = document.getElementById('windowContent');
+        const closeWindow = document.getElementById('closeWindow');
+
+        activityCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const target = card.dataset.target;
+                const activity = activities[target];
+                windowTitle.textContent = activity.title;
+                windowSubtitle.textContent = activity.subtitle;
+                windowContent.innerHTML = activity.content;
+                // 获取活动卡片的图片地址
+                const imageSrc = card.dataset.image;
+                windowImage.src = imageSrc;
+
+                activityWindows.classList.remove('hidden');
+            });
+        });
+
+        closeWindow.addEventListener('click', () => {
+            activityWindows.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
